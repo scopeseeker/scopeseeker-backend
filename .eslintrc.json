@@ -1,1 +1,41 @@
-  
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb-base",
+        "eslint:recommended",
+        "eslint-config-prettier"
+      ],
+    "plugins": [
+        "eslint-plugin-prettier"
+      ],    
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "global-require": "off",
+        "strict": ["error", "global"],
+        "indent": ["error", 4],
+        "max-len": ["error", {"code": 120}],
+        "no-console": "off",
+        "no-unused-vars": ["error", {"args": "none"}],
+        "no-var": "error",
+        "quotes": ["error", "single"],
+        "linebreak-style": ["error", "unix"],
+        "prefer-const": "error",
+        "prefer-template": "error",
+        "prefer-arrow-callback": "error",
+        "eqeqeq": ["error", "always"],
+        "func-names": ["error", "as-needed"],
+        "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
+        "array-bracket-spacing": ["error", "always"],
+        "object-curly-spacing": ["error", "always"],
+        "no-return-await": "error",
+        "prefer-promise-reject-errors": "error",
+        "require-await": "error"
+
+      }
+}
