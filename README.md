@@ -1,52 +1,80 @@
-#ScopeSeeker
+
+# Scope Seeker 
+
 ScopeSeeker is a web application that helps job seekers find employment opportunities in their field of expertise. The platform allows users to search for job openings, create a professional profile, and connect with potential employers.
 
-#Features
-Job search: Users can search for job openings based on keywords, location, salary range, and other criteria.
 
-Profile creation: Users can create a professional profile that showcases their skills, education, work experience, and other qualifications.
 
-Notifications: Users receive notifications when new job openings or messages are received etc.
+## Features
 
-#Getting Started
-#Prerequisites
-Node.js
-Yarn or NPM
-MongoDB
-Installation
-Clone the repository:
+- Personalized Job Search
+- Profile Creation
+- Target Company Jobs
+- Many more
 
-git clone https://github.com/your-username/scope-seeker.git
 
-#Install dependencies using Yarn:
+## Run Locally
 
-cd scope-seeker
-yarn install
+Clone the project
 
-Set up a MongoDB database and update the configuration file in config/database.js with your database credentials.
+```bash
+  git clone https://link-to-project
+```
 
-#Start the server:
+Go to the project directory
 
-yarn start
-Open http://localhost:3000 in your web browser to access the application.
+```bash
+  cd my-project
+```
 
-#Usage
-To use ScopeSeeker, create a user account or sign in with an existing one. You can then search for job openings, create a professional profile, and connect with potential employers. You can also customize your job search settings and receive notifications when new job openings are available.
+Install dependencies
 
-#Contributing
-If you would like to contribute to ScopeSeeker, fork the repository and create a new branch for your changes. Submit a pull request when you are ready to merge your changes into the main codebase.
+```bash
+  yarn install
+```
 
-#Dependencies
-express: ^4.17.1
-mongoose: ^6.0.8
-passport: ^0.4.1
-react: ^17.0.2
-...
-#License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Start the server
 
-#Authors
-Lokesh Dhakar
-Abhijeet Raj
-Abhishek Kumar
-Harish
+```bash
+  yarn dev
+```
+
+
+## Installation
+
+Install my-project with yarn
+
+```bash
+  yarn install my-project
+  cd my-project
+```
+    
+## Tech Stack
+
+**Server:** Node, Express, MongoDB
+
+
+## Badges
+
+Add badges from somewhere like: [shields.io](https://shields.io/)
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+
+
+## Contributing
+
+Contributions are always welcome!
+
+Please adhere to this project's `code of conduct`.
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at scopeseekerhelp@gmail.com
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
