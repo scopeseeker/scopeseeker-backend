@@ -1,13 +1,27 @@
 {
-  "name": "Demo",
+  "name": "scopeseeker-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
   "devDependencies": {
     "dotenv": "^16.0.3",
     "eslint": "^8.38.0",
     "express": "^4.18.2",
     "mongoose": "^7.0.3",
     "nodemon": "^2.0.22"
+  },
+  "description": "This is the personalized job seeker web app",
+  "repository": "https://github.com/scopeseeker/scopeseeker-backend.git",
+  "author": "lokeshdhakar97 <lokeshdhakar6633@gmail.com>",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^6.1.1",
+    "morgan": "^1.10.0"
   }
 }

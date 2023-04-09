@@ -1,0 +1,8 @@
+/node_modules
+.env
+.env.dev
+.env.prod
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
