@@ -6,6 +6,9 @@ const helmet = require('helmet');
 const cors = require('cors');
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
+const logger = require('./utils/logger')
+const bodyParser = require('body-parser');
+
 
 // Import our routes
 const jobRoutes = require('./routes/jobRoutes');
@@ -19,9 +22,21 @@ const app = express();
 app.use(helmet());
 app.use(compression());
 
+// Use Morgan for logging incoming requests
+app.use(morgan('combined', {
+  stream: {
+    write: (message) => {
+      logger.info(message.trim());
+    },
+  },
+}));
+
+
+// Add middleware for parsing JSON and urlencoded form data
+app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({ extended: true }));
 // Configure middleware
-app.use(express.json());
-app.use(morgan('combined'));
 app.use(cors());
 
 // Apply middleware for rate limiting
