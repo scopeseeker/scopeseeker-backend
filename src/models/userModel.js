@@ -61,7 +61,8 @@ const Personal_Details = new mongoose.Schema({
 
 const userSchema = new mongoose.Schema(
     {
-        firstname: { type: String, required: true , maxlength: 20 },
+        firstname: { type: String, required: true , maxlength: 20,
+         },
         lastname: { type: String, required: true,maxlength: 20 },
         username: { type: String,unique:true, required: true,maxlength: 50,minlength: 50 },
         email: { type: email, required: true,maxlength: 50 ,minlength: 50 ,unique: true },
