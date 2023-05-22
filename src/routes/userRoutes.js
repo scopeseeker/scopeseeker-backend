@@ -1,5 +1,6 @@
-import express from 'express';
-import { jobController } from '../controllers';
+
+// routes/companyRoutes.js
+const express = require('express');
 
 const router = express.Router();
 
@@ -11,6 +12,8 @@ const router = express.Router();
 // router.delete('/:id', jobController.deleteJobById);
 
 router.get('/', (req, res)=>{
-    res.send('hello')
+    res.send('hello jdkafjk')
     })
-export default userRouter;
+module.exports = router;
+
+
