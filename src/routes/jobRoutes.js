@@ -1,17 +1,16 @@
-// // routes/jobRoutes.js
+// routes/companyRoutes.js
+const express = require('express');
 
-// const express = require('express');
-// // const jobController = require('../controllers/jobController');
+const router = express.Router();
 
-// const router = express.Router();
+// router.get('/', companyController.getAllCompanies);
+// router.post('/', companyController.createCompany);
+// router.get('/:id', companyController.getCompanyById);
+// router.put('/:id', companyController.updateCompanyById);
+// router.delete('/:id', companyController.deleteCompanyById);
+router.get('/', (req, res)=>{
+    res.send('hello jdkafjk')
+    })
+module.exports = router;
 
-// // router.get('/', jobController.getAllJobs);
-// // router.get('/:id', jobController.getJobById);
-// // router.post('/', jobController.createJob);
-// // router.put('/:id', jobController.updateJob);
-// // router.delete('/:id', jobController.deleteJob);
-// router.get('/', function (req, res) {
-//     res.send('/hello')
-//     })
 
-// module.exports = router;

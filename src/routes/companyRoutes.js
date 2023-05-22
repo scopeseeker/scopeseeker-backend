@@ -1,14 +1,15 @@
-// // routes/companyRoutes.js
+import express from 'express';
+import { companyController } from '../controllers';
 
-// const express = require('express');
-// // const companyController = require('../controllers/companyController');
+const router = express.Router();
 
-// const router = express.Router();
-
-// // router.get('/', companyController.getAllCompanies);
-// // router.get('/:id', companyController.getCompanyById);
-// // router.post('/', companyController.createCompany);
-// // router.put('/:id', companyController.updateCompany);
-// // router.delete('/:id', companyController.deleteCompany);
-
-// module.exports = router;
+// Routes for the company entity
+// router.get('/', companyController.getAllCompanies);
+// router.post('/', companyController.createCompany);
+// router.get('/:id', companyController.getCompanyById);
+// router.put('/:id', companyController.updateCompanyById);
+// router.delete('/:id', companyController.deleteCompanyById);
+router.get('/', (req, res)=>{
+res.send('hello')
+})
+export default companyRoutes;
