@@ -1,14 +1,16 @@
-// // routes/userRoutes.js
+import express from 'express';
+import { jobController } from '../controllers';
 
-// const express = require('express');
-// // const userController = require('../controllers/userController');
+const router = express.Router();
 
-// const router = express.Router();
+// Routes for the job entity
+// router.get('/', jobController.getAllJobs);
+// router.post('/', jobController.createJob);
+// router.get('/:id', jobController.getJobById);
+// router.put('/:id', jobController.updateJobById);
+// router.delete('/:id', jobController.deleteJobById);
 
-// // router.get('/', userController.getAllUsers);
-// // router.get('/:id', userController.getUserById);
-// // router.post('/', userController.createUser);
-// // router.put('/:id', userController.updateUser);
-// // router.delete('/:id', userController.deleteUser);
-
-// module.exports = router;
+router.get('/', (req, res)=>{
+    res.send('hello')
+    })
+export default userRouter;

@@ -2,13 +2,20 @@
   "name": "scopeseeker-backend",
   "version": "1.0.0",
   "description": "ScopeSeeker is a web application that helps job seekers find employment opportunities in their field of expertise. The platform allows users to search for job openings, create a professional profile, and connect with potential employers.",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "./src/server.js",
+    "dev": "nodemon ./src/server.js "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "http-errors": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
