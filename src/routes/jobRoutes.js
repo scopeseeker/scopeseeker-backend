@@ -1,5 +1,4 @@
-// routes/companyRoutes.js
-const express = require('express');
+import express from "express";
 
 const router = express.Router();
 
@@ -8,9 +7,7 @@ const router = express.Router();
 // router.get('/:id', companyController.getCompanyById);
 // router.put('/:id', companyController.updateCompanyById);
 // router.delete('/:id', companyController.deleteCompanyById);
-router.get('/', (req, res)=>{
-    res.send('hello jdkafjk')
-    })
-module.exports = router;
-
-
+router.get("/", (req, res) => {
+  res.send("hello jdkafjk");
+});
+export default router;
