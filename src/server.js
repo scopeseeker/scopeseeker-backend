@@ -1,10 +1,9 @@
-const express = require('express');
+import express from "express";
+import createError from "http-errors";
+import { APP_PORT } from "./config";
+import authRoutes from "./routes/authRoutes";
+import { companyRoutes, jobRoutes, userRoutes } from "./routes";
 // const morgan = require('morgan');
-const createError = require('http-errors');
-const jobRoutes = require('./routes/jobRoutes');
-const companyRoutes = require('./routes/companyRoutes');
-const userRoutes = require('./routes/userRoutes');
-
 
 const app = express();
 
@@ -13,9 +12,10 @@ app.use(express.json());
 // app.use(morgan('dev'));
 
 // Routes
-app.use('/api/companies', companyRoutes);
-app.use('/api/jobs', jobRoutes);
-app.use('/api/users', userRoutes );
+app.use("/api/", authRoutes);
+app.use("/api/companies", companyRoutes);
+app.use("/api/jobs", jobRoutes);
+app.use("/api/users", userRoutes);
 
 // Error handling middleware
 app.use((req, res, next) => {
@@ -33,7 +33,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start the server
-const port = process.env.PORT || 3000;
+const port = APP_PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
