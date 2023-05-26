@@ -4,7 +4,6 @@
   "description": "ScopeSeeker is a web application that helps job seekers find employment opportunities in their field of expertise. The platform allows users to search for job openings, create a professional profile, and connect with potential employers.",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
     "start": "node -r esm ./src/server.js",
     "dev": "nodemon -r esm ./src/server.js ",
     "lint": "eslint",
@@ -34,5 +33,16 @@
     "husky": "^8.0.3",
     "nodemon": "^2.0.22",
     "prettier": "^2.8.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
