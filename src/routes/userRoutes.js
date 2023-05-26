@@ -1,6 +1,6 @@
 import express from 'express'
 
-const router = express.Router();
+const router = express.Router()
 
 // Routes for the job entity
 // router.get('/', jobController.getAllJobs);
@@ -9,9 +9,7 @@ const router = express.Router();
 // router.put('/:id', jobController.updateJobById);
 // router.delete('/:id', jobController.deleteJobById);
 
-router.get('/', (req, res)=>{
-    res.send('hello jdkafjk')
-    })
-    export default router;
-
-
+router.get('/', (req, res) => {
+  res.send('hello jdkafjk')
+})
+export default router
