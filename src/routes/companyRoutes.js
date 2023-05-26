@@ -1,6 +1,6 @@
-import express from "express";
+import express from 'express'
 
-const router = express.Router();
+const router = express.Router()
 
 // Routes for the company entity
 // router.get('/', companyController.getAllCompanies);
@@ -9,7 +9,7 @@ const router = express.Router();
 // router.put('/:id', companyController.updateCompanyById);
 // router.delete('/:id', companyController.deleteCompanyById);
 
-router.get("/", (req, res) => {
-  res.send("hello jdkafjk");
-});
-export default router;
+router.get('/', (req, res) => {
+  res.send('hello jdkafjk')
+})
+export default router

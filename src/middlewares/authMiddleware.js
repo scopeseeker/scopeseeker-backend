@@ -17,7 +17,6 @@
 //     }
 // };
 
-
 // import jwt from 'jsonwebtoken';
 // import { User } from '../models';
 
@@ -58,4 +57,3 @@
 // };
 
 // export default authMiddleware;
-
