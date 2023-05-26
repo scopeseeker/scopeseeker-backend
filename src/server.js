@@ -6,13 +6,27 @@ import { companyRoutes, jobRoutes, userRoutes } from "./routes";
 import errorHandler from "./middlewares/errorHandler";
 import morgan from "morgan";
 import helmat from 'helmet';
+import CORS from 'cors';
 
 const app = express();
 
+const allowedOrigins = ['http://scopeseeker.com'];
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
+
 // Middleware
 app.use(express.json());
-app.use(helmat());
 app.use(morgan('tiny'));
+app.use(helmat());
+app.use(cors(corsOptions));
 
 // Routes
 app.use("/api/", authRoutes);
