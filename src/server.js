@@ -3,13 +3,16 @@ import createError from "http-errors";
 import { APP_PORT } from "./config";
 import authRoutes from "./routes/authRoutes";
 import { companyRoutes, jobRoutes, userRoutes } from "./routes";
-// const morgan = require('morgan');
+import errorHandler from "./middlewares/errorHandler";
+import morgan from "morgan";
+import helmat from 'helmet';
 
 const app = express();
 
 // Middleware
 app.use(express.json());
-// app.use(morgan('dev'));
+app.use(helmat());
+app.use(morgan('tiny'));
 
 // Routes
 app.use("/api/", authRoutes);
@@ -32,8 +35,10 @@ app.use((err, req, res, next) => {
   });
 });
 
+app.use(errorHandler);
 // Start the server
 const port = APP_PORT || 3000;
-app.listen(port, () => {
+app.listen(port, (err) => {
+  if (err) console.log(err);
   console.log(`Server is running on port ${port}`);
 });
