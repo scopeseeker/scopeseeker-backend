@@ -1,8 +1,10 @@
 export const validateSocialMediaURL = {
-  validator (value) {
-    return /^https?:\/\/(www\.)?(twitter|linkedin|facebook|instagram)\.com\/[a-zA-Z0-9_.-]+$/.test(value)
+  validator(value) {
+    return /^https?:\/\/(www\.)?(twitter|linkedin|facebook|instagram)\.com\/[a-zA-Z0-9_.-]+$/.test(
+      value,
+    )
   },
-  message: (props) => `${props.value} is not a valid social media URL`
+  message: (props) => `${props.value} is not a valid social media URL`,
 }
 
 export const isValidDate = (dateString) => {

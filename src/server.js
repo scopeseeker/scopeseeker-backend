@@ -19,7 +19,7 @@ const corsOptions = {
     } else {
       callback(new Error('Not allowed by CORS'))
     }
-  }
+  },
 }
 
 // Middleware
@@ -44,8 +44,8 @@ app.use((err, req, res, next) => {
   res.json({
     error: {
       status: err.status || 500,
-      message: err.message
-    }
+      message: err.message,
+    },
   })
 })
 
